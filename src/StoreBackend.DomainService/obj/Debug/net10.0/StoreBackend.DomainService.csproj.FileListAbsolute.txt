@@ -19,3 +19,4 @@ C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.DomainService\bin\Debu
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.DomainService\bin\Debug\net10.0\StoreBackend.Infraestructure.pdb
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.DomainService\obj\Debug\net10.0\StoreBackend.DomainService.csproj.AssemblyReference.cache
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.DomainService\obj\Debug\net10.0\StoreBac.9096BD06.Up2Date
+C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.DomainService\obj\Debug\net10.0\StoreBackend.DomainService.sourcelink.json

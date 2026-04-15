@@ -21,3 +21,4 @@ C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Facade\bin\Debug\net10
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Facade\bin\Debug\net10.0\StoreBackend.Exceptions.pdb
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Facade\obj\Debug\net10.0\StoreBackend.Facade.csproj.AssemblyReference.cache
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Facade\obj\Debug\net10.0\StoreBac.A56EC265.Up2Date
+C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Facade\obj\Debug\net10.0\StoreBackend.Facade.sourcelink.json

@@ -12,6 +12,10 @@ namespace StoreBackend.Api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductFacade productFacade;
+        public ProductController(IProductFacade productFacade)
+        {
+            this.productFacade = productFacade;
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetProducts()

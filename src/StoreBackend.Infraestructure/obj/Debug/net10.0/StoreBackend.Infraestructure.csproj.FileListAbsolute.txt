@@ -13,3 +13,6 @@ C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\bin\De
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\bin\Debug\net10.0\StoreBackend.Domain.pdb
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\obj\Debug\net10.0\StoreBackend.Infraestructure.csproj.AssemblyReference.cache
 C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\obj\Debug\net10.0\StoreBac.4ED4B9AD.Up2Date
+C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\bin\Debug\net10.0\StoreBackend.Infraestructure.runtimeconfig.json
+C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\obj\Debug\net10.0\StoreBackend.Infraestructure.sourcelink.json
+C:\Users\Profesores\Desktop\StoreBackend\src\StoreBackend.Infraestructure\obj\Debug\net10.0\StoreBackend.Infraestructure.genruntimeconfig.cache
