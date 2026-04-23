@@ -11,8 +11,17 @@ public class ProductMapper
     {
         return new ProductDto
         {
-            ProductResourceId = model.ProductResourceId!.Value,
-            Name = model.Name
+            ProductResourceId = Guid.NewGuid(),
+            Name = model.Name,
+            Description = model.Description,
+            Quantity = model.Quantity,
+            Price = model.Price,
+            Code = model.Code,
+            Image = model.Image,
+            Available = model.Available,
+            Discount = model.Discount,
+            DiscountQuantity = model.DiscountQuantity,
+            Material = model.Material
         };
     }
 
@@ -26,7 +35,16 @@ public class ProductMapper
         return new ProductResponseModel
         {
             ProductResourceId = product.ProductResourceId,
-            Name = product.Name
+            Name = product.Name,
+            Description = product.Description,
+            Quantity = product.Quantity,
+            Price = product.Price,
+            Code = product.Code,
+            Image = product.Image,
+            Available = product.Available,
+            Discount = product.Discount,
+            DiscountQuantity = product.DiscountQuantity,
+            Material = product.Material
         };
     }
 }

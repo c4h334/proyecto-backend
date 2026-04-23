@@ -30,7 +30,16 @@ public class ProductService : IProductService
         var productEntity = new Product
         {
             ProductResourceId = product.ProductResourceId,
-            Name = product.Name
+            Name = product.Name,
+            Description = product.Description,
+            Quantity = product.Quantity,
+            Price = product.Price,
+            Code = product.Code,
+            Image = product.Image,
+            Available = product.Available,
+            Discount = product.Discount,
+            DiscountQuantity = product.DiscountQuantity,
+            Material = product.Material
         };
         return _productRepository.AddAsync(productEntity);
     }
