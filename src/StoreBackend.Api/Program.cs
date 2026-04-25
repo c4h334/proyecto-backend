@@ -30,6 +30,15 @@ builder.Services.AddScoped<IProductFacade, ProductFacade>();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+// Repositories
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
+
+// Services
+builder.Services.AddScoped<ISupplierService, SupplierService>();
+
+// Facades
+builder.Services.AddScoped<ISupplierFacade, SupplierFacade>();
+
 
 var app = builder.Build();
 
