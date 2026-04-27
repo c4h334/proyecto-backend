@@ -1,0 +1,29 @@
+# Build results
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# User settings
+**/appsettings.Development.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+project.assets.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+
+# Publish output 
+*.pubxml.user
+publish/

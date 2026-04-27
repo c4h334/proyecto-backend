@@ -15,4 +15,5 @@ public class AppDbContext : DbContext
     // Representa la tabla Product en la base de datos
     public DbSet<Product> Products { get; set; }
     public DbSet<Supplier> Suppliers { get; set; }
+    public DbSet<Customer> Customers { get; set; }
 }

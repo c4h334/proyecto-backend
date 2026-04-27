@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StoreBackend.DomainService;
 using StoreBackend.Facade;
+using StoreBackend.Infraestructure.Repositories;
 using StoreBackend.Infrastructure;
 using StoreBackend.Infrastructure.Repositories;
 
@@ -39,6 +40,14 @@ builder.Services.AddScoped<ISupplierService, SupplierService>();
 // Facades
 builder.Services.AddScoped<ISupplierFacade, SupplierFacade>();
 
+// Repositories
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+// Services
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+
+// Facades
+builder.Services.AddScoped<ICustomerFacade, CustomerFacade>();
 
 var app = builder.Build();
 
