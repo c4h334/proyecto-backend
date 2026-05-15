@@ -17,4 +17,6 @@ public interface IProductRepository
 
     // Elimina un producto existente
     Task DeleteAsync(Product product);
+
+    Task<Product> UpdateAsync(Product product);
 }

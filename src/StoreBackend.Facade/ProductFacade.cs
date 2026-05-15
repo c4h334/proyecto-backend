@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using StoreBackend.Domain.Entities;
 using StoreBackend.DomainService;
 using StoreBackend.Dto;
@@ -22,6 +24,14 @@ public class ProductFacade : IProductFacade
     public async Task<ProductDto> AddAsync(ProductDto product)
     {
         var entity = await productService.AddAsync(product);
+        await context.SaveChangesAsync();
+        return ProductMapper.ToDto(entity);
+    }
+
+    public async Task<ProductDto> UpdateAsync(ProductDto product)
+    {
+        // AQUÍ ESTÁ LA CORRECCIÓN: Le extraemos el ID al producto y se lo pasamos al servicio como primer parámetro
+        var entity = await productService.UpdateAsync(product.ProductResourceId, product);
         await context.SaveChangesAsync();
         return ProductMapper.ToDto(entity);
     }
