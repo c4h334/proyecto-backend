@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using StoreBackend.DomainService;
 using StoreBackend.Dto;
 using StoreBackend.Exceptions;
 using StoreBackend.Facade.Mappers;
 using StoreBackend.Infrastructure;
-
 
 namespace StoreBackend.Facade;
 
@@ -19,6 +20,26 @@ public class CustomerFacade : ICustomerFacade
         this.context = context;
     }
 
+    public async Task<CustomerDto> AddAsync(CustomerDto customer)
+    {
+        var entity = await customerService.AddAsync(customer);
+        await context.SaveChangesAsync();
+        return CustomerMapper.ToDto(entity);
+    }
+
+    public async Task<CustomerDto> UpdateAsync(CustomerDto customer)
+    {
+        var entity = await customerService.UpdateAsync(customer.CustomerResourceId, customer);
+        await context.SaveChangesAsync();
+        return CustomerMapper.ToDto(entity);
+    }
+
+    public async Task DeleteAsync(Guid customerId)
+    {
+        await customerService.DeleteAsync(customerId);
+        await context.SaveChangesAsync();
+    }
+
     public async Task<List<CustomerDto>> GetAllAsync()
     {
         var entities = await customerService.GetAllAsync();
@@ -30,18 +51,5 @@ public class CustomerFacade : ICustomerFacade
         var entity = await customerService.GetByIdAsync(customerId);
         if (entity == null) throw new ResourceNotFoundException();
         return CustomerMapper.ToDto(entity);
-    }
-
-    public async Task<CustomerDto> AddAsync(CustomerDto customer)
-    {
-        var entity = await customerService.AddAsync(customer);
-        await context.SaveChangesAsync();
-        return CustomerMapper.ToDto(entity);
-    }
-
-    public async Task DeleteAsync(Guid customerId)
-    {
-        await customerService.DeleteAsync(customerId);
-        await context.SaveChangesAsync();
     }
 }

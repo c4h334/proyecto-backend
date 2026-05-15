@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using StoreBackend.Domain.Entities;
 using StoreBackend.Infrastructure;
@@ -26,12 +28,19 @@ public class CustomerRepository : ICustomerRepository
 
     public async Task<Customer> AddAsync(Customer customer)
     {
-        await _context.Customers.AddAsync(customer);
-        return customer;
+        _context.Customers.Add(customer);
+        return await Task.FromResult(customer);
     }
 
     public async Task DeleteAsync(Customer customer)
     {
         _context.Customers.Remove(customer);
+        await Task.CompletedTask;
+    }
+
+    public async Task<Customer> UpdateAsync(Customer customer)
+    {
+        _context.Customers.Update(customer);
+        return await Task.FromResult(customer);
     }
 }

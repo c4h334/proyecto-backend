@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using StoreBackend.DomainService;
 using StoreBackend.Dto;
 using StoreBackend.Exceptions;
@@ -21,6 +23,13 @@ public class SupplierFacade : ISupplierFacade
     public async Task<SupplierDto> AddAsync(SupplierDto supplier)
     {
         var entity = await supplierService.AddAsync(supplier);
+        await context.SaveChangesAsync();
+        return SupplierMapper.ToDto(entity);
+    }
+
+    public async Task<SupplierDto> UpdateAsync(SupplierDto supplier)
+    {
+        var entity = await supplierService.UpdateAsync(supplier.SupplierResourceId, supplier);
         await context.SaveChangesAsync();
         return SupplierMapper.ToDto(entity);
     }
