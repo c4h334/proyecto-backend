@@ -12,6 +12,7 @@ namespace StoreBackend.Api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductFacade productFacade;
+        
         public ProductController(IProductFacade productFacade)
         {
             this.productFacade = productFacade;
@@ -20,11 +21,9 @@ namespace StoreBackend.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
-
             var products = await productFacade.GetAllAsync();
             var models = ProductMapper.ToModel(products);
             return Ok(models);
-
         }
 
         [HttpGet("{id}")]
@@ -33,7 +32,6 @@ namespace StoreBackend.Api.Controllers
             try
             {
                 var product = await productFacade.GetByIdAsync(id);
-
                 var model = ProductMapper.ToModel(product);
                 return Ok(model);
             }
@@ -49,7 +47,31 @@ namespace StoreBackend.Api.Controllers
             var dto = ProductMapper.ToDto(product);
             var addedProduct = await productFacade.AddAsync(dto);
             var model = ProductMapper.ToModel(addedProduct);
+            
             return CreatedAtAction(nameof(GetProduct), new { id = model.ProductResourceId }, model);
+        }
+
+        // --- NUEVO: MÉTODO PUT PARA ACTUALIZAR ---
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] CreateProductRequestModel product)
+        {
+            try
+            {
+                var dto = ProductMapper.ToDto(product);
+                
+                // Aseguramos que el id del DTO coincida con la URL
+                dto.ProductResourceId = id; 
+                
+                // Asegúrate de que el método en tu Facade se llame UpdateAsync
+                var updatedProduct = await productFacade.UpdateAsync(dto); 
+                var model = ProductMapper.ToModel(updatedProduct);
+                
+                return Ok(model);
+            }
+            catch (ResourceNotFoundException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpDelete("{id}")]

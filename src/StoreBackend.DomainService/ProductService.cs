@@ -50,4 +50,22 @@ public class ProductService : IProductService
         if (product == null) throw new ResourceNotFoundException();
         await _productRepository.DeleteAsync(product);
     }
+
+    public async Task<Product> UpdateAsync(Guid productId, ProductDto productDto)
+    {
+        var product = await _productRepository.GetByIdAsync(productId);
+        if (product == null) throw new ResourceNotFoundException();
+        product.ProductResourceId = productDto.ProductResourceId;
+        product.Name = productDto.Name;
+        product.Description = productDto.Description;
+        product.Quantity = productDto.Quantity;
+        product.Price = productDto.Price;
+        product.Code = productDto.Code;
+        product.Image = productDto.Image;
+        product.Available = productDto.Available;
+        product.Discount = productDto.Discount;
+        product.DiscountQuantity = productDto.DiscountQuantity;
+        product.Material = productDto.Material;
+        return await _productRepository.UpdateAsync(product);
+    }
 }
