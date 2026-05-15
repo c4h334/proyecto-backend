@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using StoreBackend.Domain.Entities;
 using StoreBackend.Dto;
 
@@ -10,5 +12,5 @@ public interface ICustomerService
     Task<Customer?> GetByIdAsync(Guid customerId);
     Task<Customer> AddAsync(CustomerDto customer);
     Task DeleteAsync(Guid customerId);
-
+    Task<Customer> UpdateAsync(Guid customerId, CustomerDto customer); 
 }

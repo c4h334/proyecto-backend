@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using StoreBackend.Domain.Entities;
+using StoreBackend.Infrastructure;
 
-namespace StoreBackend.Infrastructure.Repositories;
+namespace StoreBackend.Infraestructure.Repositories;
 
 public class SupplierRepository : ISupplierRepository
 {
@@ -25,12 +28,19 @@ public class SupplierRepository : ISupplierRepository
 
     public async Task<Supplier> AddAsync(Supplier supplier)
     {
-        await _context.Suppliers.AddAsync(supplier);
-        return supplier;
+        _context.Suppliers.Add(supplier);
+        return await Task.FromResult(supplier);
     }
 
     public async Task DeleteAsync(Supplier supplier)
     {
         _context.Suppliers.Remove(supplier);
+        await Task.CompletedTask;
+    }
+
+    public async Task<Supplier> UpdateAsync(Supplier supplier)
+    {
+        _context.Suppliers.Update(supplier);
+        return await Task.FromResult(supplier);
     }
 }

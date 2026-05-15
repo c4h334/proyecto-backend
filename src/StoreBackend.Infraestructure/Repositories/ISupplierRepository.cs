@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using StoreBackend.Domain.Entities;
 
-namespace StoreBackend.Infrastructure.Repositories;
+namespace StoreBackend.Infraestructure.Repositories;
 
 public interface ISupplierRepository
 {
@@ -9,4 +11,5 @@ public interface ISupplierRepository
     Task<Supplier?> GetByIdAsync(Guid supplierId);
     Task<Supplier> AddAsync(Supplier supplier);
     Task DeleteAsync(Supplier supplier);
+    Task<Supplier> UpdateAsync(Supplier supplier); // NUEVO
 }

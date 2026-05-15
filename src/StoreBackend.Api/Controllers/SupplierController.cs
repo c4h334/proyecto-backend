@@ -1,4 +1,5 @@
-using Microsoft.AspNetCore.Http;
+using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using StoreBackend.Api.Mappers;
 using StoreBackend.Api.Models.Requests;
@@ -48,6 +49,23 @@ namespace StoreBackend.Api.Controllers
             var addedSupplier = await supplierFacade.AddAsync(dto);
             var model = SupplierMapper.ToModel(addedSupplier);
             return CreatedAtAction(nameof(GetSupplier), new { id = model.SupplierResourceId }, model);
+        }
+
+        [HttpPut("{id}")] // ENDPOINT DE ACTUALIZAR NUEVO
+        public async Task<IActionResult> UpdateSupplier(Guid id, [FromBody] CreateSupplierRequestModel supplier)
+        {
+            try
+            {
+                var dto = SupplierMapper.ToDto(supplier);
+                dto.SupplierResourceId = id;
+                var updatedSupplier = await supplierFacade.UpdateAsync(dto);
+                var model = SupplierMapper.ToModel(updatedSupplier);
+                return Ok(model);
+            }
+            catch (ResourceNotFoundException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpDelete("{id}")]

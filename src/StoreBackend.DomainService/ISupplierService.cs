@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using StoreBackend.Domain.Entities;
 using StoreBackend.Dto;
 
@@ -10,4 +12,5 @@ public interface ISupplierService
     Task<Supplier?> GetByIdAsync(Guid supplierId);
     Task<Supplier> AddAsync(SupplierDto supplier);
     Task DeleteAsync(Guid supplierId);
+    Task<Supplier> UpdateAsync(Guid supplierId, SupplierDto supplier); // NUEVO
 }
