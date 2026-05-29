@@ -1,20 +1,38 @@
-using System; // Espacio de nombres base de .NET
-using System.Net.Http.Headers; // (No se está usando aquí, pero está importado)
-using Microsoft.EntityFrameworkCore; // Entity Framework Core
-using StoreBackend.Domain.Entities; // Donde está la entidad Product
+using Microsoft.EntityFrameworkCore;
+using StoreBackend.Domain.Entities;
 
 namespace StoreBackend.Infrastructure;
 
-// Clase que representa el contexto de base de datos
 public class AppDbContext : DbContext
 {
-    // Constructor que recibe las opciones de configuración del DbContext
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    { }
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+    {
+    }
 
-    // Representa la tabla Product en la base de datos
     public DbSet<Product> Products { get; set; }
     public DbSet<Supplier> Suppliers { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<User> Users { get; set; }
+
+    public DbSet<Role> Roles { get; set; }
+    public DbSet<UserRole> UserRoles { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<UserRole>()
+            .HasKey(ur => new { ur.UserId, ur.RoleId });
+
+        modelBuilder.Entity<UserRole>()
+            .HasOne(ur => ur.User)
+            .WithMany(u => u.UserRoles)
+            .HasForeignKey(ur => ur.UserId);
+
+        modelBuilder.Entity<UserRole>()
+            .HasOne(ur => ur.Role)
+            .WithMany(r => r.UserRoles)
+            .HasForeignKey(ur => ur.RoleId);
+    }
 }

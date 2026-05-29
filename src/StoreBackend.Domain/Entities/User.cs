@@ -31,5 +31,12 @@ namespace StoreBackend.Domain.Entities
         [Required]
         [MaxLength(255)]
         public string PasswordHash { get; set; } = string.Empty;
+        public List<UserRole> UserRoles { get; set; } = [];
+
+        public void ClearRoles()
+        {
+            UserRoles.Clear();
+        }
     }
+
 }
