@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StoreBackend.Domain.Entities
 {
-    [Table("User")]
+    [Table("Users")]
     public class User
     {
         [Key]
@@ -31,5 +31,12 @@ namespace StoreBackend.Domain.Entities
         [Required]
         [MaxLength(255)]
         public string PasswordHash { get; set; } = string.Empty;
+        public List<UserRole> UserRoles { get; set; } = [];
+
+        public void ClearRoles()
+        {
+            UserRoles.Clear();
+        }
     }
+
 }

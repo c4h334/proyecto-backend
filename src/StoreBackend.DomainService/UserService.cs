@@ -32,5 +32,26 @@ namespace StoreBackend.DomainService
 
             return await _userRepository.CreateAsync(entity);
         }
+        public async Task<User?> GetByUserAndPassword(
+    AuthorizationRequestDto requestDto)
+        {
+            var user =
+                await _userRepository
+                    .GetByUsername(requestDto.Username);
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            var validPassword =
+                BCrypt.Net.BCrypt.Verify(
+                    requestDto.Password,
+                    user.PasswordHash);
+
+            return validPassword
+                ? user
+                : null;
+        }
     }
 }

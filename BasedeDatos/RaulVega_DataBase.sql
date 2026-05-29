@@ -56,6 +56,45 @@ CREATE TABLE [Suppliers] (
 );
 
 -- ============================================================
+-- ROLES TABLE
+-- ============================================================
+
+CREATE TABLE Roles (
+    RoleId INT IDENTITY(1,1) PRIMARY KEY,
+    RoleResourceId UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+    Name NVARCHAR(100) NOT NULL UNIQUE
+);
+
+-- ============================================================
+-- USERS TABLE
+-- ============================================================
+
+CREATE TABLE Users (
+    UserId INT IDENTITY(1,1) PRIMARY KEY,
+    UserResourceId UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+    Name NVARCHAR(100) NOT NULL,
+    Username NVARCHAR(50) NOT NULL UNIQUE,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL
+);
+
+
+-- ============================================================
+-- USER ROLES TABLE
+-- ============================================================
+
+CREATE TABLE UserRoles (
+    UserId INT NOT NULL,
+    RoleId INT NOT NULL,
+    UserRoleResourceId UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+
+    PRIMARY KEY (UserId, RoleId),
+
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    FOREIGN KEY (RoleId) REFERENCES Roles(RoleId)
+);
+
+-- ============================================================
 -- Datos Cliente 
 -- ============================================================
 INSERT INTO Customers (FullName, Identification, Phone, HomeAddress, Email)
@@ -134,4 +173,36 @@ VALUES
 'Monitor Samsung, Impresora Epson');
 
 
+-- ============================================================
+-- Creación de roles 
+-- ============================================================
+INSERT INTO Roles (Name)
+VALUES
+('Administrator'),
+('Customer'),
+('Support');
+
+
+
+INSERT INTO UserRoles
+(
+    UserId,
+    RoleId
+)
+VALUES
+(
+    1,
+    1
+);
+
+INSERT INTO UserRoles
+(
+    UserId,
+    RoleId
+)
+VALUES
+(
+    2,
+    2
+);
 
