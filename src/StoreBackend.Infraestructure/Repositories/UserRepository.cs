@@ -28,5 +28,12 @@ namespace StoreBackend.Infraestructure.Repositories
         {
             return await _context.Users.AnyAsync(u => u.Email == email);
         }
+        public Task<User?> GetByUsername(string username)
+        {
+            return _context.Users
+                .Include(u => u.UserRoles)
+                .ThenInclude(ur => ur.Role)
+                .FirstOrDefaultAsync(u => u.Username == username);
+        }
     }
 }

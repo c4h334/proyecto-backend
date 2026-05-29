@@ -6,5 +6,8 @@ namespace StoreBackend.DomainService
     public interface IUserService
     {
         Task<User> CreateAsync(CreateUserDto user);
+
+        Task<User?> GetByUserAndPassword(
+            AuthorizationRequestDto requestDto);
     }
 }

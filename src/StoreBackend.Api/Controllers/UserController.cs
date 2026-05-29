@@ -31,10 +31,11 @@ namespace StoreBackend.Api.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "An error occurred while processing the request.");
+                return StatusCode(
+                    StatusCodes.Status500InternalServerError,
+                    ex.ToString());
             }
         }
     }

@@ -5,7 +5,11 @@ namespace StoreBackend.Infraestructure.Repositories
     public interface IUserRepository
     {
         Task<User> CreateAsync(User user);
+
         Task<bool> HasUserByUsernameAsync(string username);
+
         Task<bool> HasUserByEmailAsync(string email);
+
+        Task<User?> GetByUsername(string username);
     }
 }
