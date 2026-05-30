@@ -1,28 +1,30 @@
+using StoreBackend.Api.Models.Requests;
 using StoreBackend.Api.Models.Responses;
 using StoreBackend.Dto;
-using StoreBackend.Api.Models.Requests;
 
-namespace StoreBackend.Api.Mappers;
-
-public static class AuthorizationMapper
+namespace StoreBackend.Api.Mappers
 {
-    public static AuthorizationRequestDto ToDto(
-        AuthorizationRequestModel model)
+    public static class AuthorizationMapper
     {
-        return new AuthorizationRequestDto
+        public static AuthorizationRequestDto ToDto(AuthorizationRequestModel model)
         {
-            Username = model.Username,
-            Password = model.Password,
-        };
-    }
+            return new AuthorizationRequestDto
+            {
+                Username = model.Username,
+                Password = model.Password
+            };
+        }
 
-    public static AuthorizationResponse ToResponse(
-        AuthorizationResponseDto dto)
-    {
-        return new AuthorizationResponse
+        public static AuthorizationResponse ToResponse(AuthorizationResponseDto dto)
         {
-            BearerToken = dto.BearerToken,
-            ExpiresIn = dto.ExpiresIn,
-        };
+            return new AuthorizationResponse
+            {
+                BearerToken = dto.BearerToken,
+                ExpiresIn = dto.ExpiresIn,
+                Name = dto.Name,
+                Email = dto.Email,
+                Username = dto.Username
+            };
+        }
     }
 }

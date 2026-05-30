@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StoreBackend.Api.Mappers;
@@ -18,6 +19,7 @@ namespace StoreBackend.Api.Controllers
             this.productFacade = productFacade;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
@@ -26,6 +28,7 @@ namespace StoreBackend.Api.Controllers
             return Ok(models);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProduct(Guid id)
         {
@@ -51,7 +54,6 @@ namespace StoreBackend.Api.Controllers
             return CreatedAtAction(nameof(GetProduct), new { id = model.ProductResourceId }, model);
         }
 
-        // --- NUEVO: MÉTODO PUT PARA ACTUALIZAR ---
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] CreateProductRequestModel product)
         {
@@ -59,10 +61,8 @@ namespace StoreBackend.Api.Controllers
             {
                 var dto = ProductMapper.ToDto(product);
                 
-                // Aseguramos que el id del DTO coincida con la URL
                 dto.ProductResourceId = id; 
                 
-                // Asegúrate de que el método en tu Facade se llame UpdateAsync
                 var updatedProduct = await productFacade.UpdateAsync(dto); 
                 var model = ProductMapper.ToModel(updatedProduct);
                 

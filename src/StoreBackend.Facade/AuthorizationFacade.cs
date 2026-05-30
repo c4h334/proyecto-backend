@@ -54,6 +54,9 @@ namespace StoreBackend.Facade
                 ExpiresIn =
                     DateTime.UtcNow
                         .AddMinutes(expirationMinutes),
+                Name = user.Name,
+                Email = user.Email,
+                Username = user.Username
             };
         }
 
