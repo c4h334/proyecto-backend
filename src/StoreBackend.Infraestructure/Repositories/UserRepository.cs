@@ -16,6 +16,9 @@ namespace StoreBackend.Infraestructure.Repositories
         public async Task<User> CreateAsync(User user)
         {
             _context.Users.Add(user);
+            
+            await _context.SaveChangesAsync(); 
+            
             return user;
         }
 
@@ -28,6 +31,7 @@ namespace StoreBackend.Infraestructure.Repositories
         {
             return await _context.Users.AnyAsync(u => u.Email == email);
         }
+        
         public Task<User?> GetByUsername(string username)
         {
             return _context.Users

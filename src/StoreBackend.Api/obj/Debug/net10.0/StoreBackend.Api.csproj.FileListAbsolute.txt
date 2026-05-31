@@ -340,3 +340,5 @@ C:\Users\Admin\Documents\repos\ProyectoDesarrolloSoftwareIV\proyecto-backend\src
 C:\Users\Admin\Documents\repos\ProyectoDesarrolloSoftwareIV\proyecto-backend\src\StoreBackend.Api\obj\Debug\net10.0\StoreBackend.Api.pdb
 C:\Users\Admin\Documents\repos\ProyectoDesarrolloSoftwareIV\proyecto-backend\src\StoreBackend.Api\obj\Debug\net10.0\StoreBackend.Api.genruntimeconfig.cache
 C:\Users\Admin\Documents\repos\ProyectoDesarrolloSoftwareIV\proyecto-backend\src\StoreBackend.Api\obj\Debug\net10.0\ref\StoreBackend.Api.dll
+C:\Users\Admin\Documents\repos\ProyectoDesarrolloSoftwareIV\proyecto-backend\src\StoreBackend.Api\bin\Debug\net10.0\BCrypt-Net-Next.dll
+C:\Users\Admin\Documents\repos\ProyectoDesarrolloSoftwareIV\proyecto-backend\src\StoreBackend.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
