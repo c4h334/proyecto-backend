@@ -22,5 +22,12 @@ namespace StoreBackend.Facade
             await context.SaveChangesAsync();
             return UserMapper.ToDto(entity);
         }
+
+        public async Task<UserDto> CreateAdminAsync(CreateUserDto user)
+        {
+            var entity = await _userService.CreateAdminAsync(user);
+            await context.SaveChangesAsync();
+            return UserMapper.ToDto(entity);
+        }
     }
 }

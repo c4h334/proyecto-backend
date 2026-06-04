@@ -5,5 +5,6 @@ namespace StoreBackend.Facade
     public interface IUserFacade
     {
         Task<UserDto> CreateAsync(CreateUserDto user);
+        Task<UserDto> CreateAdminAsync(CreateUserDto user);
     }
 }

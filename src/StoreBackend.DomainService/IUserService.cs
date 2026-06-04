@@ -9,5 +9,7 @@ namespace StoreBackend.DomainService
 
         Task<User?> GetByUserAndPassword(
             AuthorizationRequestDto requestDto);
+
+            Task<User> CreateAdminAsync(CreateUserDto user);
     }
 }

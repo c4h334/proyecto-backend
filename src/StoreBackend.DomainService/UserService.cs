@@ -60,5 +60,33 @@ namespace StoreBackend.DomainService
 
             return validPassword ? user : null;
         }
+
+        public async Task<User> CreateAdminAsync(CreateUserDto user)
+{
+    if (await _userRepository.HasUserByUsernameAsync(user.Username))
+        throw new Exceptions.BadRequestResponseException("El nombre de usuario ya está en uso");
+
+    if (await _userRepository.HasUserByEmailAsync(user.Email))
+        throw new Exceptions.BadRequestResponseException("El correo electrónico ya está en uso");
+
+    var entity = new User
+    {
+        UserResourceId = Guid.NewGuid(),
+        Name = user.Name,
+        Username = user.Username,
+        Email = user.Email,
+        PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.Password),
+        UserRoles = new List<UserRole>()
+    };
+
+    var adminRole = await _roleRepository.GetByNameAsync(RoleNames.Administrator);
+    
+    if (adminRole != null)
+    {
+        entity.UserRoles.Add(new UserRole { User = entity, Role = adminRole });
+    }
+
+    return await _userRepository.CreateAsync(entity);
+}
     }
 }
