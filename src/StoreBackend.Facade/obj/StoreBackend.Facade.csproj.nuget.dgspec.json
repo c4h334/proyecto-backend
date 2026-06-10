@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj": {}
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj": {
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj",
+        "projectUniqueName": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj",
         "projectName": "StoreBackend.DomainService",
-        "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.DomainService\\obj\\",
+        "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj",
+        "packagesPath": "C:\\Users\\gaboc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.DomainService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,20 +30,19 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj"
               }
             }
           }
@@ -58,11 +57,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "BCrypt.Net-Next": {
@@ -86,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -364,20 +362,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj": {
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj",
         "projectName": "StoreBackend.Domain",
-        "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\obj\\",
+        "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj",
+        "packagesPath": "C:\\Users\\gaboc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -390,7 +388,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -405,11 +402,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -427,7 +423,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -705,20 +701,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj": {
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj",
+        "projectUniqueName": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj",
         "projectName": "StoreBackend.Dto",
-        "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\obj\\",
+        "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj",
+        "packagesPath": "C:\\Users\\gaboc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -731,7 +727,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -746,11 +741,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -768,7 +762,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1046,20 +1040,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj": {
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj",
+        "projectUniqueName": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj",
         "projectName": "StoreBackend.Exceptions",
-        "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Exceptions\\obj\\",
+        "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Exceptions\\StoreBackend.Exceptions.csproj",
+        "packagesPath": "C:\\Users\\gaboc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Exceptions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1072,7 +1066,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -1087,11 +1080,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -1109,7 +1101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1387,20 +1379,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj": {
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj",
+        "projectUniqueName": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj",
         "projectName": "StoreBackend.Facade",
-        "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Facade\\obj\\",
+        "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Facade\\StoreBackend.Facade.csproj",
+        "packagesPath": "C:\\Users\\gaboc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Facade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1413,17 +1405,16 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.DomainService\\StoreBackend.DomainService.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Dto\\StoreBackend.Dto.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj"
               }
             }
           }
@@ -1438,11 +1429,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -1460,7 +1450,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1738,20 +1728,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj": {
+    "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj",
         "projectName": "StoreBackend.Infraestructure",
-        "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Infraestructure\\obj\\",
+        "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\StoreBackend.Infraestructure.csproj",
+        "packagesPath": "C:\\Users\\gaboc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaboc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1764,11 +1754,10 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\repos\\ProyectoDesarrolloSoftwareIV\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj"
+              "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj": {
+                "projectPath": "C:\\Users\\gaboc\\OneDrive - Universidad de Costa Rica\\Universidad\\UCR\\IV Semestre (el regreso)\\Desarrollo de Software IV\\ProyectoSoftwareIV\\proyecto-backend\\proyecto-backend\\src\\StoreBackend.Domain\\StoreBackend.Domain.csproj"
               }
             }
           }
@@ -1783,11 +1772,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
@@ -1819,7 +1807,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
