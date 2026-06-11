@@ -1,0 +1,20 @@
+[33m0c41258[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mSecurity[m[33m, [m[1;31morigin/Security[m[33m)[m chore: remover archivos innecesarios del repositorio
+[33m1289f37[m Integracion de seguridada
+[33mb317393[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Merge pull request #3 from c4h334/feature/update-customers-suppliers
+[33m7b66f61[m[33m ([m[1;31morigin/feature/update-customers-suppliers[m[33m)[m Sincronizando con master limpia y resolviendo conflictos
+[33m97e40fe[m Merge master y resolviendo conflictos de binarios
+[33m46184e7[m Limpieza manual de binarios para resolver conflictos
+[33m1a0c7a2[m Limpieza definitiva de binarios y cache de compilacion
+[33m4384576[m Se agregaron las opciones de actualizar registros para proveedores y clientes.
+[33m7054bcd[m Merge pull request #2 from c4h334/feature/update-product-implementation
+[33m213e5a6[m[33m ([m[1;31morigin/feature/update-product-implementation[m[33m)[m Se implementó la opción de actualizar los productos.
+[33mc56e177[m Merge pull request #1 from c4h334/feature/fe-backend-connection
+[33m0d79c80[m Se realizó la conexión con el frontend mediante la configuración de CORS en el backend. Por último, se actualizaron los datos de las tablas en la base de datos.
+[33md2c1ba5[m Se crearon los archivos necesarios para la tabla Customer y se agregó el gitignore
+[33mccdc3ff[m Adabtacion de backend con la tabla Supplier de la base de datos
+[33meb00cc5[m Base de datos que se usara en el proyecto
+[33m69d2125[m Se adapto el backend, y se completo la tabla products de la base de datos
+[33mfd427f4[m Terminado hoy
+[33md466742[m Cambios menores
+[33m883e0f2[m Códigos de presentación copiados y pegados
+[33m2e1300a[m Initial commit
