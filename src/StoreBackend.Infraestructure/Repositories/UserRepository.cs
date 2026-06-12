@@ -39,5 +39,27 @@ namespace StoreBackend.Infraestructure.Repositories
                 .ThenInclude(ur => ur.Role)
                 .FirstOrDefaultAsync(u => u.Username == username);
         }
+
+        public Task<List<User>> GetAllAsync()
+        {
+            return _context.Users
+                .Include(u => u.UserRoles)
+                .ThenInclude(ur => ur.Role)
+                .ToListAsync();
+        }
+
+        public Task<User?> GetByResourceIdAsync(Guid resourceId)
+        {
+            return _context.Users
+                .Include(u => u.UserRoles)
+                .ThenInclude(ur => ur.Role)
+                .FirstOrDefaultAsync(u => u.UserResourceId == resourceId);
+        }
+
+        public Task DeleteAsync(User user)
+        {
+            _context.Users.Remove(user);
+            return Task.CompletedTask;
+        }
     }
 }

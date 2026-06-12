@@ -1,4 +1,7 @@
 using StoreBackend.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace StoreBackend.Infraestructure.Repositories
 {
@@ -11,5 +14,11 @@ namespace StoreBackend.Infraestructure.Repositories
         Task<bool> HasUserByEmailAsync(string email);
 
         Task<User?> GetByUsername(string username);
+
+        Task<List<User>> GetAllAsync();
+
+        Task<User?> GetByResourceIdAsync(Guid resourceId);
+
+        Task DeleteAsync(User user);
     }
 }

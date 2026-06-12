@@ -60,5 +60,60 @@ namespace StoreBackend.DomainService
 
             return validPassword ? user : null;
         }
+
+        public Task<List<User>> GetAllAsync()
+        {
+            return _userRepository.GetAllAsync();
+        }
+
+        public async Task<User> UpdateAsync(Guid resourceId, UpdateUserDto userDto)
+        {
+            var user = await _userRepository.GetByResourceIdAsync(resourceId);
+            if (user == null)
+                throw new Exceptions.ResourceNotFoundException("Usuario no encontrado");
+
+            // Validar si el nuevo username ya existe en otro usuario
+            if (user.Username != userDto.Username && await _userRepository.HasUserByUsernameAsync(userDto.Username))
+                throw new Exceptions.BadRequestResponseException("El nombre de usuario ya está en uso");
+
+            // Validar si el nuevo correo ya existe en otro usuario
+            if (user.Email != userDto.Email && await _userRepository.HasUserByEmailAsync(userDto.Email))
+                throw new Exceptions.BadRequestResponseException("El correo electrónico ya está en uso");
+
+            user.Name = userDto.Name;
+            user.Username = userDto.Username;
+            user.Email = userDto.Email;
+
+            if (!string.IsNullOrEmpty(userDto.Password))
+            {
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
+            }
+
+            // Actualizar roles
+            user.ClearRoles();
+            foreach (var roleName in userDto.Roles)
+            {
+                var role = await _roleRepository.GetByNameAsync(roleName);
+                if (role != null)
+                {
+                    user.UserRoles.Add(new UserRole
+                    {
+                        User = user,
+                        Role = role
+                    });
+                }
+            }
+
+            return user;
+        }
+
+        public async Task DeleteAsync(Guid resourceId)
+        {
+            var user = await _userRepository.GetByResourceIdAsync(resourceId);
+            if (user == null)
+                throw new Exceptions.ResourceNotFoundException("Usuario no encontrado");
+
+            await _userRepository.DeleteAsync(user);
+        }
     }
 }

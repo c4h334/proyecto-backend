@@ -1,14 +1,13 @@
-using System;
 using System.Collections.Generic;
 
-namespace StoreBackend.Api.Models.Responses
+namespace StoreBackend.Dto
 {
-    public class UserResponseModel
+    public class UpdateUserDto
     {
-        public Guid UserResourceId { get; set; }
         public required string Name { get; set; }
         public required string Username { get; set; }
         public required string Email { get; set; }
+        public string? Password { get; set; }
         public List<string> Roles { get; set; } = [];
     }
 }

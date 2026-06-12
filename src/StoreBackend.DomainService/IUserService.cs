@@ -1,5 +1,8 @@
 using StoreBackend.Domain.Entities;
 using StoreBackend.Dto;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace StoreBackend.DomainService
 {
@@ -9,5 +12,11 @@ namespace StoreBackend.DomainService
 
         Task<User?> GetByUserAndPassword(
             AuthorizationRequestDto requestDto);
+
+        Task<List<User>> GetAllAsync();
+
+        Task<User> UpdateAsync(Guid resourceId, UpdateUserDto userDto);
+
+        Task DeleteAsync(Guid resourceId);
     }
 }

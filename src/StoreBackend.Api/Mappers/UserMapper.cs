@@ -25,6 +25,19 @@ namespace StoreBackend.Api.Mappers
                 Name = user.Name,
                 Username = user.Username,
                 Email = user.Email,
+                Roles = user.Roles
+            };
+        }
+
+        public static UpdateUserDto ToDto(UpdateUserRequestModel user)
+        {
+            return new UpdateUserDto
+            {
+                Name = user.Name,
+                Username = user.Username,
+                Email = user.Email,
+                Password = user.Password,
+                Roles = user.Roles
             };
         }
     }
