@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using StoreBackend.Domain.Entities;
-using StoreBackend.Infrastructure;
+using StoreBackend.Infrastructure; // Asegúrate de que el namespace de tu AppDbContext esté aquí
 
 namespace StoreBackend.Infraestructure.Repositories
 {
@@ -13,9 +13,14 @@ namespace StoreBackend.Infraestructure.Repositories
             _context = context;
         }
 
-        public Task<List<Role>> GetAllAsync()
+        public async Task<List<Role>> GetAllAsync()
         {
-            return _context.Roles.ToListAsync();
+            return await _context.Roles.ToListAsync();
+        }
+
+        public async Task<Role?> GetByNameAsync(string name)
+        {
+            return await _context.Roles.FirstOrDefaultAsync(r => r.Name == name);
         }
     }
 }

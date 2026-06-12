@@ -11,6 +11,7 @@ using StoreBackend.Api.Filters;
 using StoreBackend.Api.Security;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -7,10 +7,12 @@ namespace StoreBackend.DomainService
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IRoleRepository _roleRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IRoleRepository roleRepository)
         {
             _userRepository = userRepository;
+            _roleRepository = roleRepository;
         }
 
         public async Task<User> CreateAsync(CreateUserDto user)
@@ -27,31 +29,36 @@ namespace StoreBackend.DomainService
                 Name = user.Name,
                 Username = user.Username,
                 Email = user.Email,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.Password)
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.Password),
+                UserRoles = new List<UserRole>()
             };
+
+            var customerRole = await _roleRepository.GetByNameAsync(RoleNames.Customer);
+            
+            if (customerRole != null)
+            {
+                entity.UserRoles.Add(new UserRole 
+                { 
+                    User = entity,
+                    Role = customerRole 
+                });
+            }
 
             return await _userRepository.CreateAsync(entity);
         }
-        public async Task<User?> GetByUserAndPassword(
-    AuthorizationRequestDto requestDto)
+
+        public async Task<User?> GetByUserAndPassword(AuthorizationRequestDto requestDto)
         {
-            var user =
-                await _userRepository
-                    .GetByUsername(requestDto.Username);
+            var user = await _userRepository.GetByUsername(requestDto.Username);
 
             if (user == null)
             {
                 return null;
             }
 
-            var validPassword =
-                BCrypt.Net.BCrypt.Verify(
-                    requestDto.Password,
-                    user.PasswordHash);
+            var validPassword = BCrypt.Net.BCrypt.Verify(requestDto.Password, user.PasswordHash);
 
-            return validPassword
-                ? user
-                : null;
+            return validPassword ? user : null;
         }
     }
 }
