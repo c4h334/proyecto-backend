@@ -157,6 +157,25 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseRateLimiter();
+// Seed default roles if not exists (only Administrator and Customer)
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    var rolesNeeded = new[] { RoleNames.Administrator, RoleNames.Customer };
+    foreach (var roleName in rolesNeeded)
+    {
+        if (!context.Roles.Any(r => r.Name == roleName))
+        {
+            context.Roles.Add(new StoreBackend.Domain.Entities.Role
+            {
+                RoleResourceId = Guid.NewGuid(),
+                Name = roleName
+            });
+        }
+    }
+    context.SaveChanges();
+}
+
 app.MapControllers()
     .RequireRateLimiting("fixed");
 

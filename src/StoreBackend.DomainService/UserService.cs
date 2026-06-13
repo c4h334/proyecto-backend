@@ -90,19 +90,30 @@ namespace StoreBackend.DomainService
                 user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
             }
 
-            // Actualizar roles
-            user.ClearRoles();
+            // Actualizar roles de forma diferencial para evitar conflictos de tracking en EF Core
+            var currentRoles = user.UserRoles.ToList();
+            foreach (var userRole in currentRoles)
+            {
+                if (!userDto.Roles.Contains(userRole.Role.Name))
+                {
+                    user.UserRoles.Remove(userRole);
+                }
+            }
+
             foreach (var roleName in userDto.Roles)
             {
-                var role = await _roleRepository.GetByNameAsync(roleName);
-                if (role != null)
+                if (!currentRoles.Any(ur => ur.Role.Name == roleName))
                 {
-                    user.UserRoles.Add(new UserRole
+                    var role = await _roleRepository.GetByNameAsync(roleName);
+                    if (role != null)
                     {
-                        UserRoleResourceId = Guid.NewGuid(),
-                        User = user,
-                        Role = role
-                    });
+                        user.UserRoles.Add(new UserRole
+                        {
+                            UserRoleResourceId = Guid.NewGuid(),
+                            User = user,
+                            Role = role
+                        });
+                    }
                 }
             }
 
