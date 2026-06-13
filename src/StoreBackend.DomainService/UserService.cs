@@ -39,6 +39,7 @@ namespace StoreBackend.DomainService
             {
                 entity.UserRoles.Add(new UserRole 
                 { 
+                    UserRoleResourceId = Guid.NewGuid(),
                     User = entity,
                     Role = customerRole 
                 });
@@ -98,6 +99,7 @@ namespace StoreBackend.DomainService
                 {
                     user.UserRoles.Add(new UserRole
                     {
+                        UserRoleResourceId = Guid.NewGuid(),
                         User = user,
                         Role = role
                     });
