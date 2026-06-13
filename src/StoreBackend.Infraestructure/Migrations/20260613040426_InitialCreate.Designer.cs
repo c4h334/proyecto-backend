@@ -12,7 +12,7 @@ using StoreBackend.Infrastructure;
 namespace StoreBackend.Infraestructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260527025241_InitialCreate")]
+    [Migration("20260613040426_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -117,6 +117,27 @@ namespace StoreBackend.Infraestructure.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("StoreBackend.Domain.Entities.Role", b =>
+                {
+                    b.Property<int>("RoleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid>("RoleResourceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("RoleId");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("StoreBackend.Domain.Entities.Supplier", b =>
                 {
                     b.Property<int>("SupplierId")
@@ -196,7 +217,54 @@ namespace StoreBackend.Infraestructure.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("StoreBackend.Domain.Entities.UserRole", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserRoleResourceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("StoreBackend.Domain.Entities.UserRole", b =>
+                {
+                    b.HasOne("StoreBackend.Domain.Entities.Role", "Role")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StoreBackend.Domain.Entities.User", "User")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StoreBackend.Domain.Entities.Role", b =>
+                {
+                    b.Navigation("UserRoles");
+                });
+
+            modelBuilder.Entity("StoreBackend.Domain.Entities.User", b =>
+                {
+                    b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618
         }
