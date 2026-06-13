@@ -5,6 +5,7 @@ using StoreBackend.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace StoreBackend.Facade
 {
@@ -22,6 +23,13 @@ namespace StoreBackend.Facade
         public async Task<UserDto> CreateAsync(CreateUserDto user)
         {
             var entity = await _userService.CreateAsync(user);
+            await context.SaveChangesAsync();
+            return UserMapper.ToDto(entity);
+        }
+
+        public async Task<UserDto> CreateAdminAsync(CreateUserDto user)
+        {
+            var entity = await _userService.CreateAdminAsync(user);
             await context.SaveChangesAsync();
             return UserMapper.ToDto(entity);
         }

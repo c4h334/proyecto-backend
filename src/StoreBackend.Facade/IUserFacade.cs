@@ -9,6 +9,8 @@ namespace StoreBackend.Facade
     {
         Task<UserDto> CreateAsync(CreateUserDto user);
 
+        Task<UserDto> CreateAdminAsync(CreateUserDto user);
+
         Task<List<UserDto>> GetAllAsync();
 
         Task<UserDto> UpdateAsync(Guid resourceId, UpdateUserDto userDto);

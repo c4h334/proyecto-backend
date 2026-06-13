@@ -13,6 +13,8 @@ namespace StoreBackend.DomainService
         Task<User?> GetByUserAndPassword(
             AuthorizationRequestDto requestDto);
 
+        Task<User> CreateAdminAsync(CreateUserDto user);
+
         Task<List<User>> GetAllAsync();
 
         Task<User> UpdateAsync(Guid resourceId, UpdateUserDto userDto);
