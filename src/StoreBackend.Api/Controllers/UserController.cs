@@ -38,5 +38,25 @@ namespace StoreBackend.Api.Controllers
                     ex.ToString());
             }
         }
+
+        [HttpPost("admin")]
+        public async Task<IActionResult> CreateAdminAsync([FromBody] CreateUserRequestModel user)
+        {
+            try
+            {
+                var requestDto = UserMapper.ToDto(user);
+                var userDto = await _userFacade.CreateAdminAsync(requestDto);
+                var userModel = UserMapper.ToModel(userDto);
+                return Ok(userModel);
+            }
+            catch (BadRequestResponseException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.ToString());
+            }
+        }
     }
 }
