@@ -39,6 +39,8 @@ public class ProductMapper
             Description = product.Description,
             Quantity = product.Quantity,
             Price = product.Price,
+            FinalPrice = product.Price -
+                         (product.Price * product.Discount / 100),
             Code = product.Code,
             Image = product.Image,
             Available = product.Available,
