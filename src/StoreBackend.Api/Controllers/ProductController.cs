@@ -31,6 +31,15 @@ namespace StoreBackend.Api.Controllers
         }
 
         [AllowAnonymous]
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllProducts()
+        {
+            var products = await productFacade.GetAllAsync();
+            var models = ProductMapper.ToModel(products);
+            return Ok(models);
+        }
+
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProduct(Guid id)
         {
