@@ -5,6 +5,7 @@ using StoreBackend.Api.Mappers;
 using StoreBackend.Api.Models.Requests;
 using StoreBackend.Exceptions;
 using StoreBackend.Facade;
+using System.Linq;
 
 namespace StoreBackend.Api.Controllers
 {
@@ -24,7 +25,8 @@ namespace StoreBackend.Api.Controllers
         public async Task<IActionResult> GetProducts()
         {
             var products = await productFacade.GetAllAsync();
-            var models = ProductMapper.ToModel(products);
+            var available = products.Where(p => p.Available).ToList();
+            var models = ProductMapper.ToModel(available);
             return Ok(models);
         }
 
